@@ -59,9 +59,9 @@ def read_seq(path):
             
             tmp_file = '/tmp/img%d.jpg' % i
             open(tmp_file, 'wb+').write(I)
-            
+             
             img = cv.imread(tmp_file)
-            img = cv.cvtColor(img, cv.COLOR_BGR2RGB)
+            #img = cv.cvtColor(img, cv.COLOR_BGR2RGB)  test if this change the color
             images.append(img)
         except:
             pass
@@ -77,10 +77,10 @@ def save_img(dname, fn, i, frame):
         os.path.basename(fn).split('.')[0], i), frame)
     
 
-out_dir = 'data/images'
+out_dir = 'test_data/images'
 if not os.path.exists(out_dir):
     os.makedirs(out_dir)
-for dname in sorted(glob.glob('data/set*')):
+for dname in sorted(glob.glob('test_data/set*')):
     for fn in sorted(glob.glob('{}/*.seq'.format(dname))):
         #cap = cv.VideoCapture(fn)
         images = read_seq(fn)

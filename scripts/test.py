@@ -1,11 +1,5 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
-
-import os
-import glob
-import cv2 as cv
+import cv2
 import struct
-
 
 def read_seq(path):
     
@@ -42,55 +36,31 @@ def read_seq(path):
     images = []
     
     for i in range(0, params['num_frames']):
+        tmp = struct.unpack_from('@I', bytes[s:s+4])[0]
+        s = seek[i] + tmp + extra
+        if i == 0:
+            val = struct.unpack_from('@B', bytes[s:s+1])[0]
+            if val != 0:
+                s -= 4
+            else:
+                extra += 8
+                s += 8
+        seek[i+1] = s
+        #print(s, s+4, len(bytes))
         try:
-            tmp = struct.unpack_from('@I', bytes[s:s+4])[0]
-            s = seek[i] + tmp + extra
-            if i == 0:
-                val = struct.unpack_from('@B', bytes[s:s+1])[0]
-                if val != 0:
-                    s -= 4
-                else:
-                    extra += 8
-                    s += 8
-            seek[i+1] = s
-        
             nbytes = struct.unpack_from('@i', bytes[s:s+4])[0]
             I = bytes[s+4:s+nbytes]
             
             tmp_file = '/tmp/img%d.jpg' % i
             open(tmp_file, 'wb+').write(I)
             
-            img = cv.imread(tmp_file)
-            img = cv.cvtColor(img, cv.COLOR_BGR2RGB)
+            img = cv2.imread(tmp_file)
+            img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
             images.append(img)
         except:
             pass
-
     return images
 
 
-
-def save_img(dname, fn, i, frame):
-    #print("I am in")
-    cv.imwrite('{}/{}_{}_{}.png'.format(
-        out_dir, os.path.basename(dname),
-        os.path.basename(fn).split('.')[0], i), frame)
-    
-
-out_dir = 'data/images'
-if not os.path.exists(out_dir):
-    os.makedirs(out_dir)
-for dname in sorted(glob.glob('data/set*')):
-    for fn in sorted(glob.glob('{}/*.seq'.format(dname))):
-        #cap = cv.VideoCapture(fn)
-        images = read_seq(fn)
-        i = 0
-        for image in images:
-            #ret, frame = cap.read()
-            #if not ret:
-            #    print("oops")
-            #    break
-            save_img(dname, fn, i, image)
-
-            i += 1
-        print(fn)
+fn = "data/set02/V000.seq"
+images = read_seq(fn)

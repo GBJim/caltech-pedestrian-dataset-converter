@@ -1,0 +1,67 @@
+--2016-06-14 13:59:48--  http://www.vision.caltech.edu/Image_Datasets/CaltechPedestrians/datasets/USA/annotations.zip
+Resolving www.vision.caltech.edu (www.vision.caltech.edu)... failed: Name or service not known.
+wget: unable to resolve host address ‘www.vision.caltech.edu’
+--2016-06-14 14:00:08--  http://www.vision.caltech.edu/Image_Datasets/CaltechPedestrians/datasets/USA/set00.tar
+Resolving www.vision.caltech.edu (www.vision.caltech.edu)... failed: Name or service not known.
+wget: unable to resolve host address ‘www.vision.caltech.edu’
+--2016-06-14 14:00:28--  http://www.vision.caltech.edu/Image_Datasets/CaltechPedestrians/datasets/USA/set01.tar
+Resolving www.vision.caltech.edu (www.vision.caltech.edu)... failed: Name or service not known.
+wget: unable to resolve host address ‘www.vision.caltech.edu’
+--2016-06-14 14:00:48--  http://www.vision.caltech.edu/Image_Datasets/CaltechPedestrians/datasets/USA/set02.tar
+Resolving www.vision.caltech.edu (www.vision.caltech.edu)... failed: Name or service not known.
+wget: unable to resolve host address ‘www.vision.caltech.edu’
+--2016-06-14 14:01:08--  http://www.vision.caltech.edu/Image_Datasets/CaltechPedestrians/datasets/USA/set03.tar
+Resolving www.vision.caltech.edu (www.vision.caltech.edu)... failed: Name or service not known.
+wget: unable to resolve host address ‘www.vision.caltech.edu’
+--2016-06-14 14:01:28--  http://www.vision.caltech.edu/Image_Datasets/CaltechPedestrians/datasets/USA/set04.tar
+Resolving www.vision.caltech.edu (www.vision.caltech.edu)... failed: Name or service not known.
+wget: unable to resolve host address ‘www.vision.caltech.edu’
+--2016-06-14 14:01:48--  http://www.vision.caltech.edu/Image_Datasets/CaltechPedestrians/datasets/USA/set05.tar
+Resolving www.vision.caltech.edu (www.vision.caltech.edu)... failed: Name or service not known.
+wget: unable to resolve host address ‘www.vision.caltech.edu’
+--2016-06-14 14:02:08--  http://www.vision.caltech.edu/Image_Datasets/CaltechPedestrians/datasets/USA/set06.tar
+Resolving www.vision.caltech.edu (www.vision.caltech.edu)... failed: Name or service not known.
+wget: unable to resolve host address ‘www.vision.caltech.edu’
+--2016-06-14 14:02:28--  http://www.vision.caltech.edu/Image_Datasets/CaltechPedestrians/datasets/USA/set07.tar
+Resolving www.vision.caltech.edu (www.vision.caltech.edu)... failed: Name or service not known.
+wget: unable to resolve host address ‘www.vision.caltech.edu’
+--2016-06-14 14:02:48--  http://www.vision.caltech.edu/Image_Datasets/CaltechPedestrians/datasets/USA/set08.tar
+Resolving www.vision.caltech.edu (www.vision.caltech.edu)... failed: Name or service not known.
+wget: unable to resolve host address ‘www.vision.caltech.edu’
+--2016-06-14 14:03:08--  http://www.vision.caltech.edu/Image_Datasets/CaltechPedestrians/datasets/USA/set09.tar
+Resolving www.vision.caltech.edu (www.vision.caltech.edu)... failed: Name or service not known.
+wget: unable to resolve host address ‘www.vision.caltech.edu’
+--2016-06-14 14:03:28--  http://www.vision.caltech.edu/Image_Datasets/CaltechPedestrians/datasets/USA/set10.tar
+Resolving www.vision.caltech.edu (www.vision.caltech.edu)... failed: Name or service not known.
+wget: unable to resolve host address ‘www.vision.caltech.edu’
+Archive:  annotations.zip
+  End-of-central-directory signature not found.  Either this file is not
+  a zipfile, or it constitutes one disk of a multi-part archive.  In the
+  latter case the central directory and zipfile comment will be found on
+  the last disk(s) of this archive.
+unzip:  cannot find zipfile directory in one of annotations.zip or
+        annotations.zip.zip, and cannot find annotations.zip.ZIP, period.
+set00/V000.seq
+tar: Unexpected EOF in archive
+tar: rmtlseek not stopped at a record boundary
+tar: Error is not recoverable: exiting now
+tar: set01.tar: Cannot open: No such file or directory
+tar: Error is not recoverable: exiting now
+tar: set02.tar: Cannot open: No such file or directory
+tar: Error is not recoverable: exiting now
+tar: set03.tar: Cannot open: No such file or directory
+tar: Error is not recoverable: exiting now
+tar: set04.tar: Cannot open: No such file or directory
+tar: Error is not recoverable: exiting now
+tar: set05.tar: Cannot open: No such file or directory
+tar: Error is not recoverable: exiting now
+tar: set06.tar: Cannot open: No such file or directory
+tar: Error is not recoverable: exiting now
+tar: set07.tar: Cannot open: No such file or directory
+tar: Error is not recoverable: exiting now
+tar: set08.tar: Cannot open: No such file or directory
+tar: Error is not recoverable: exiting now
+tar: set09.tar: Cannot open: No such file or directory
+tar: Error is not recoverable: exiting now
+tar: set10.tar: Cannot open: No such file or directory
+tar: Error is not recoverable: exiting now
