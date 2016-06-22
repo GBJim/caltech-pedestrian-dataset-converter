@@ -5,8 +5,7 @@ import os
 import glob
 import cv2 as cv
 import struct
-import Image
-import StringIO
+
 
 
 
@@ -68,10 +67,10 @@ def save_img(dname, fn, i, frame):
 
     
 
-out_dir = 'test_data/images'
+out_dir = 'data/images'
 if not os.path.exists(out_dir):
     os.makedirs(out_dir)
-for dname in sorted(glob.glob('test_data/set*')):
+for dname in sorted(glob.glob('data/set*')):
     for fn in sorted(glob.glob('{}/*.seq'.format(dname))):
         #cap = cv.VideoCapture(fn)
         seq_to_images(dname, fn)
